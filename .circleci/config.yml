@@ -21,10 +21,17 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            pytest --template=html1/index.html --report=report.html
+            mkdir -p allure-results
+            pytest
+            allure generate allure-results -o allure-report --clean
+#            pytest --template=html1/index.html --report=report.html
+#      - store_artifacts:
+#          path: report.html
+#          destination: python-report
       - store_artifacts:
-          path: report.html
-          destination: python-report
+          path: allure-report
+          destination: allure-report
+
 
 workflows:
   build-and-test:
