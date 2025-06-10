@@ -29,13 +29,15 @@ jobs:
 #      - store_artifacts:
 #          path: report.html
 #          destination: python-report
-#      - run:
-#          name: Install Allure and Generate Report
-#          command: |
-#            sudo apt-get update && sudo apt-get install -y default-jre wget unzip
-#            wget https://github.com/allure-framework/allure2/releases/download/2.27.0/allure-2.27.0.zip
-#            unzip allure-2.27.0.zip
-#            allure-2.27.0/bin/allure generate allure-results -o allure-report --clean
+      - run:
+          name: Install Allure CLI
+          command: |
+            sudo apt-get update && sudo apt-get install -y default-jre wget unzip
+            wget https://github.com/allure-framework/allure2/releases/download/2.27.0/allure-2.27.0.zip
+            unzip -o allure-2.27.0.zip
+            sudo mv allure-2.27.0 /opt/allure
+            sudo ln -s /opt/allure/bin/allure /usr/bin/allure
+            allure-2.27.0/bin/allure generate allure-results -o allure-report --clean
 
       - store_artifacts:
                 path: allure-report
