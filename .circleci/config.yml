@@ -23,7 +23,6 @@ jobs:
             . venv/bin/activate
             mkdir -p allure-results
             pytest
-            allure generate allure-results -o allure-report --clean
 #            allure generate allure-results -o allure-report --clean
 #            pytest --template=html1/index.html --report=report.html
 #      - store_artifacts:
