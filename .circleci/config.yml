@@ -16,7 +16,6 @@ jobs:
           command: |
             pip install -r requirements.txt
             pip install allure-pytest
-            npm install -g allure-commandline
             . venv/bin/activate
       - run:
           name: run tests
@@ -24,19 +23,27 @@ jobs:
             . venv/bin/activate
             mkdir -p allure-results
             pytest
-            allure generate allure-results -o allure-report --clean
+#            allure generate allure-results -o allure-report --clean
 #            pytest --template=html1/index.html --report=report.html
 #      - store_artifacts:
 #          path: report.html
 #          destination: python-report
+      - run:
+          name: Install Allure and Generate Report
+          command: |
+            sudo apt-get update && sudo apt-get install -y default-jre wget unzip
+            wget https://github.com/allure-framework/allure2/releases/download/2.27.0/allure-2.27.0.zip
+            unzip allure-2.27.0.zip
+            allure-2.27.0/bin/allure generate allure-results -o allure-report --clean
+
       - store_artifacts:
-          path: allure-report
-          destination: allure-report
+                path: allure-report
+                destination: allure-report
 
       - persist_to_workspace:
-          root: .
-          paths:
-            - allure-report
+                root: .
+                paths:
+                  - allure-report
 
 workflows:
   build-and-test:
