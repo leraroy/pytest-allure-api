@@ -14,12 +14,13 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            . venv/bin/activate
             pip install -r requirements.txt
+            . venv/bin/activate
       - run:
           name: Allure
-          command:
+          command: |
             sudo npm install -g allure-commandline
+            . venv/bin/activate
       - run:
           name: Inject environment variables securely
           command: |
