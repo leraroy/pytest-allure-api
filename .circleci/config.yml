@@ -21,7 +21,7 @@ jobs:
       - run:
           name: Install Allure CLI
           command: |
-            udo apt-get update && sudo apt-get install -y default-jre wget unzip
+            sudo apt-get update && sudo apt-get install -y default-jre wget unzip
             wget https://github.com/allure-framework/allure2/releases/download/2.27.0/allure-2.27.0.zip
             unzip allure-2.27.0.zip
 
