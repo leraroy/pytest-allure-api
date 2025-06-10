@@ -37,7 +37,7 @@ jobs:
           paths:
             - allure-report
 
-#workflows:
-#  build-and-test:
-#    jobs:
-#      - python-job
+workflows:
+  build-and-test:
+    jobs:
+      - python-job
