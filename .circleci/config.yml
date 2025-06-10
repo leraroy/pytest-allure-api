@@ -15,11 +15,7 @@ jobs:
           name: install dependencies
           command: |
             pip install -r requirements.txt
-            . venv/bin/activate
-      - run:
-          name: Allure
-          command: |
-            npm install -g allure-commandline --save-dev
+            pip install allure-pytest
             . venv/bin/activate
       - run:
           name: Inject environment variables securely
