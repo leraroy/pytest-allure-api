@@ -32,8 +32,12 @@ jobs:
           path: allure-report
           destination: allure-report
 
+      - persist_to_workspace:
+          root: .
+          paths:
+            - allure-report
 
-workflows:
-  build-and-test:
-    jobs:
-      - python-job
+#workflows:
+#  build-and-test:
+#    jobs:
+#      - python-job
