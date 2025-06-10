@@ -11,10 +11,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Set up Python 3.13
         uses: actions/setup-python@v5
         with:
             python-version: "3.13"
+      - name: Env
+        uses: c-py/action-dotenv-to-setenv@v5
+        id: source-env
+        with:
+          env-file: .env
+      - run: echo ${{ steps.source-env.outputs.node_options }}
+
       - name: Install dependencies
         run: |
            python -m pip install --upgrade pip
@@ -36,7 +44,7 @@ jobs:
           retention-days: 20
 
       - name: Get Allure history
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         if: always()
         continue-on-error: true
         with:
@@ -55,7 +63,7 @@ jobs:
 
       - name: Deploy report to Github Pages
         if: always()
-        uses: peaceiris/actions-gh-pages@v2
+        uses: peaceiris/actions-gh-pages@v4
         env:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
