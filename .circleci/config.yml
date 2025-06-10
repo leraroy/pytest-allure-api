@@ -2,10 +2,10 @@ version: 2.1
 
 jobs:
   python-job:
-    orbs:
-      allure: ayte/allure@0.1.3
     docker:
       - image: circleci/python:3.10.1-node-browsers
+    orbs:
+      allure: ayte/allure@0.1.3
     steps:
       - checkout
       - run:
