@@ -16,6 +16,7 @@ jobs:
           command: |
             pip install -r requirements.txt
             pip install allure-pytest
+            npm install -g allure-commandline
             . venv/bin/activate
       - run:
           name: run tests
