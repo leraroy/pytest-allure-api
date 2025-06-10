@@ -1,0 +1,7 @@
+{
+  "name": "test_task",
+  "description": "This is test task",
+  "due_date": "125",
+  "priority": 2,
+  "color": "red"
+}
