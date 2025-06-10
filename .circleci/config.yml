@@ -17,10 +17,10 @@ jobs:
             . venv/bin/activate
             pip install -r requirements.txt
       - run:
-          name: install env
+          name: Inject environment variables securely
           command: |
-            . venv/bin/activate
-            docker compose --env-file .env.development up -d
+             echo "QA_TOKEN=QA_TOKEN" >> .env
+             echo "QA_API_URL=QA_API_URL" >> .env
 
       - run:
           name: run tests
