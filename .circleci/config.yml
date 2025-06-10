@@ -18,12 +18,6 @@ jobs:
             pip install allure-pytest
             . venv/bin/activate
       - run:
-          name: Inject environment variables securely
-          command: |
-             echo "QA_TOKEN=QA_TOKEN" >> .env
-             echo "QA_API_URL=QA_API_URL" >> .env
-
-      - run:
           name: run tests
           command: |
             . venv/bin/activate
