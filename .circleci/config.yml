@@ -19,7 +19,7 @@ jobs:
       - run:
           name: Allure
           command: |
-            sudo npm install -g allure-commandline
+            pip install -g allure-commandline
             . venv/bin/activate
       - run:
           name: Inject environment variables securely
