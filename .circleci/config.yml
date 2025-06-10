@@ -16,21 +16,16 @@ jobs:
           command: |
             . venv/bin/activate
             pip install -r requirements.txt
-
-#      - run:
-#          name: Load .env Variables
-#          command: |
-#            set -a
-#            source .env
-#            set +a
+      - run:
+          name: install env
+          command: |
+            . venv/bin/activate
+            docker compose --env-file .env.development up -d
 
       - run:
           name: run tests
           command: |
             . venv/bin/activate
-            set -a
-            source .env
-            set +a
             pytest --template=html1/index.html --report=report.html
       - store_artifacts:
           path: report.html
