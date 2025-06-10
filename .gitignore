@@ -3,7 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 .pytest_cashe/
-
+.allure-results/
 # C extensions
 *.so
 

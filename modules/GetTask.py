@@ -17,6 +17,6 @@ class GetTask(BasePage):
         return self.sent_request_without_auth("GET", f"{self.URI}/{id}")
 
     def get_task_schema_validate(self, id):
-        return self.validate_schema(func=self.get_task(id).json(), path="get_goal_schema.json")
+        return self.validate_schema(func=self.get_task(id).json(), path="get_task_schema.json")
 
 

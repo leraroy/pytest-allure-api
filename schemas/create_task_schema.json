@@ -1,7 +1,7 @@
 {
      "type": "object",
      "properties": {
-         "goal": {
+         "task": {
              "type": "object",
              "properties": {
                  "id": {"type": "string"},

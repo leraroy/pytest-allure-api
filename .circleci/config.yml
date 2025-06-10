@@ -17,17 +17,20 @@ jobs:
             . venv/bin/activate
             pip install -r requirements.txt
 
-      - run:
-          name: Load .env Variables
-          command: |
-            set -a
-            source .env
-            set +a
+#      - run:
+#          name: Load .env Variables
+#          command: |
+#            set -a
+#            source .env
+#            set +a
 
       - run:
           name: run tests
           command: |
             . venv/bin/activate
+            set -a
+            source .env
+            set +a
             pytest --template=html1/index.html --report=report.html
       - store_artifacts:
           path: report.html

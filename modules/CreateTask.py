@@ -36,4 +36,4 @@ class CreateTask(BasePage):
         return self.sent_request_without_auth("POST", self.URI)
 
     def create_task_schema_validate(self):
-        return self.validate_schema(func=self.create_task_with_random_name().json(), path="create_goal_schema.json")
+        return self.validate_schema(func=self.create_task_with_random_name().json(), path="create_task_schema.json")
