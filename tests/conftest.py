@@ -11,7 +11,6 @@ def create_task_with_delete():
             'name': response.json()['name'],
             'id': response.json()['id']
         }
-        print(f"Name: {data['name']} ID: {data['id']}")
 
     yield data
 
