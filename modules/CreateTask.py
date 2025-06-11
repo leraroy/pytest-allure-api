@@ -22,12 +22,8 @@ class CreateTask(BasePage):
         return response
 
     def create_task_with_file(self):
-        print("create data")
         data = self.read_path_body_with_random_fields("example.json")
-        print("create task")
         response = self.create_task(data)
-        print("Response json")
-        print(response.json())
         self.env_data['id'] = response.json()['id']
         self.env_data['name'] = response.json()['name']
         return response

@@ -33,3 +33,4 @@ class TestUpdateTask:
         response = self.update_task.update_without_auth(self.task_id)
         with allure.step("Checks status code that returns 400"):
             assert response.status_code == 400
+

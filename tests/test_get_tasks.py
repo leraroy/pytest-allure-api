@@ -35,8 +35,7 @@ class TestGetTasks:
         with allure.step("Check status code is 400"):
             assert response.status_code == 400
 
-    # @allure.story("Test get tasks has valid schema")
-    # def test_get_tasks_validate_schema(self):
-    #     result = self.get_tasks.get_tasks_schema_validate()
-    #     with allure.step("Check schema is valid"):
-    #         assert result is True
+    @allure.story("Test get tasks has valid schema")
+    def test_get_tasks_validate_schema(self):
+        with allure.step("Check schema is valid"):
+            assert self.get_tasks.get_tasks_schema_validate() is True

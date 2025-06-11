@@ -1,4 +1,0 @@
-2025-06-10 22:41:20 [35mDEBUG[0m Starting new HTTPS connection (1): api.clickup.com:443
-2025-06-10 22:41:21 [35mDEBUG[0m https://api.clickup.com:443 "PUT /api/v2/task/86c3yj2gw HTTP/1.1" 200 None
-2025-06-10 22:41:21 [35mDEBUG[0m Starting new HTTPS connection (1): api.clickup.com:443
-2025-06-10 22:41:22 [35mDEBUG[0m https://api.clickup.com:443 "GET /api/v2/task/86c3yj2gw HTTP/1.1" 200 None

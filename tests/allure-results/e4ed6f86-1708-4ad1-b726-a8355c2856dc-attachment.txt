@@ -1,0 +1,6 @@
+2025-06-11 11:20:11 DEBUG Starting new HTTPS connection (1): api.clickup.com:443
+2025-06-11 11:20:12 DEBUG https://api.clickup.com:443 "POST /api/v2/list/901512007029/task HTTP/1.1" 200 None
+2025-06-11 11:20:12 DEBUG Starting new HTTPS connection (1): api.clickup.com:443
+2025-06-11 11:20:13 DEBUG https://api.clickup.com:443 "GET /api/v2/list/901512007029/task HTTP/1.1" 200 None
+2025-06-11 11:20:13 DEBUG Starting new HTTPS connection (1): api.clickup.com:443
+2025-06-11 11:20:13 DEBUG https://api.clickup.com:443 "DELETE /api/v2/task/86c3yqwaq HTTP/1.1" 204 0

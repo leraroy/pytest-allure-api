@@ -39,4 +39,4 @@ class TestGetTask:
     @allure.story("test get task validate schema")
     def test_get_task_validate_schema(self):
         with allure.step("Check schema is valid"):
-            assert self.get_task.get_task_schema_validate(self.task_id)
+            assert self.get_task.get_task_schema_validate(self.task_id) is True

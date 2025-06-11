@@ -33,7 +33,7 @@ class TestCreateTask:
     @allure.story("test create task has valid schema")
     def test_create_task_validate_schema(self):
         with allure.step("Check schema is valid"):
-            assert self.create_task.create_task_schema_validate()
+            assert self.create_task.create_task_schema_validate() is True
 
     @pytest.fixture(scope="function", autouse=True)
     def teardown(self):

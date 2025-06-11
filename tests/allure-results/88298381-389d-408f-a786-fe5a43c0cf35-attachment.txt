@@ -1,0 +1,5 @@
+
+{'name': 'Christina', 'id': '86c3ytg5n'}
+Name: Christina ID: 86c3ytg5n
+{'type': 'object', 'properties': {'tasks': {'type': 'array', 'items': {'type': 'object', 'properties': {'id': {'type': 'string'}, 'custom_item_id': {'type': 'number'}, 'name': {'type': 'string'}, 'text_content': {'type': 'string'}, 'description': {'type': 'string'}}}}}}
+OK validate

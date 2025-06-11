@@ -1,3 +1,0 @@
-
-{'name': 'Raven', 'id': '86c3yj2fp'}
-Name: Raven ID: 86c3yj2fp
