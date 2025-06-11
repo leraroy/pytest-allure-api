@@ -14,18 +14,16 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            . venv/bin/activate
             pip install -r requirements.txt
             pip install allure-pytest
+            . venv/bin/activate
 
       - run:
           name: Install Allure CLI
           command: |
             sudo apt-get update && sudo apt-get install -y default-jre wget unzip
             wget https://github.com/allure-framework/allure2/releases/download/2.27.0/allure-2.27.0.zip
-            unzip -o allure-2.27.0.zip
-            sudo mv allure-2.27.0 /opt/allure
-            sudo ln -s /opt/allure/bin/allure /usr/local/bin/allure
+            unzip allure-2.27.0.zip
 
       - run:
           name: run tests
